@@ -2,17 +2,20 @@ class EventsController < ApplicationController
   before_filter :login_required
   def indexv
     @eventpage = true
-    @events = Event.all
+    @user = User.find_by(id: session['user_id'])
+    @events = Event.where(user_id: @user.id)
   end
 
   def indexe
     @eventpage = true
-    @events = Event.all
+    @user = User.find_by(id: session['user_id'])
+    @events = Event.where(user_id: @user.id)
   end
   
   def indexd
     @eventpage = true
-    @events = Event.all
+    @user = User.find_by(id: session['user_id'])
+    @events = Event.where(user_id: @user.id)
   end
 
   def show

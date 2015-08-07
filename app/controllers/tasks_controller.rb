@@ -3,17 +3,20 @@ class TasksController < ApplicationController
   
   def indexv
     @taskpage = true
-    @tasks = Task.all
+    @user = User.find_by(id: session['user_id'])
+    @tasks = Task.where(user_id: @user.id)
   end
 
   def indexe
     @taskpage = true
-    @tasks = Task.all
+    @user = User.find_by(id: session['user_id'])
+    @tasks = Task.where(user_id: @user.id)
   end
   
   def indexd
     @taskpage = true
-    @tasks = Task.all
+    @user = User.find_by(id: session['user_id'])
+    @tasks = Task.where(user_id: @user.id)
   end
   
   def show
