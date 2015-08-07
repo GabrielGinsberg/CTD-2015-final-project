@@ -1,0 +1,40 @@
+<div class="container">
+  <h1><b><u><%= @event.name %></u></b></h1>
+</div>
+
+<div class="container" style="margin-left:231px;">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="/events/indexv">View Events</a></li>
+      <li role="presentation"><a href="/new_event">Add a New Event</a></li>
+      <li role="presentation"><a href="/events/indexe">Edit Events</a></li>
+      <li role="presentation"><a href="/events/indexd">Delete Events</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <div>
+      <strong>Name</strong>:<br />
+      <p><%= @event.name %></p>
+    </div>
+    <div>
+      <strong>Description</strong>:<br />
+      <p><%= @event.description %></p>
+    </div>
+    <div>
+      <strong>Date</strong>:<br />
+      <p><%= @event.date %></p>
+    </div>
+    <div>
+      <strong>Location</strong>:<br />
+      <p><%= @event.location %></p>
+    </div>
+    <div>
+      <strong>User</strong>:<br />
+      <p><%= @event.user_id %></p>
+    </div>
+    <a href="/events/indexv">Back</a>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <h1><center><u><%= month_calendar events: @meetings do |date, meetings| %></u></center></h1>
+  <a href = "/date/<%=date%>">
+  <div style="border: black solid 2px; padding-right: 130px; padding-bottom: 80px; background-color: white;">
+    <%= date.day %>
+  </div>
+    </a>
+</div>
+  <% meetings.each do |meeting| %>
+    <div>
+      <%= meeting.name %>
+    </div>
+  <% end %>
+<% end %>

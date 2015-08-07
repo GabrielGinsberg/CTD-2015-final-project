@@ -1,0 +1,38 @@
+<div class="container">
+  <h1><b><u>Edit Account</u></b></h1>
+</div>
+
+<div class="container" style="margin-left:231px;">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="/users/<%=params['id']%>">View Account</a></li>
+      <li role="presentation" class="active"><a href="/users/<%=params['id']%>/edit">Edit Account</a></li>
+      <li role="presentation"><a href="/users/<%=params['id']%>/destroy">Delete Account</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="jumbotron">
+    <form class="container" action="/users/<%=@user.id%>/update">
+      <div>
+        <label for="name">name</label><br />
+        <input id="name" name="name" value="<%= @user.name  %>" type="text" />
+      </div>
+      <div>
+        <label for="email">email</label><br />
+        <input id="email" name="email" value="<%= @user.email  %>" type="text" />
+      </div>
+      <div>
+        <label for="password">password</label><br />
+        <input id="password" name="password" type="password" />
+      </div>
+      <div>
+        <label for="password_confirmation">password</label><br />
+        <input id="password_confirmation" name="password_confirmation" type="password" />
+      </div>
+      <div>
+        <input type="submit">
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+  <h1><b><u>Edit Events</u></b></h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="/events/indexv">View Events</a></li>
+      <li role="presentation"><a href="/new_event">Add a New Event</a></li>
+      <li role="presentation" class="active"><a href="/events/indexe">Edit Events</a></li>
+      <li role="presentation"><a href="/events/indexd">Delete Events</a></li>
+    </ul>
+  </div>
+</div>
+
+  <div class="jumbotron">
+    <table class="container">
+      <thead>
+        <div class="container">
+           <div class="row">
+            <tr>
+              <th>Event #</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Date</th>
+              <th>Location</th>
+              <th>User</th>
+            </tr>
+         </div>
+      </div>
+    </thead>
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.id %></td>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+          <td><%= event.date %></td>
+          <td><%= event.location %></td>
+          <td><%= event.user_id %></td>
+          <td><a href="/events/<%= event.id %>/edit">Edit</a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

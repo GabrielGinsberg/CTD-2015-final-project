@@ -1,0 +1,42 @@
+<div class="container">
+  <h1><b><u><%= @task.name %></u></b></h1>
+</div>
+
+<div class="container" style="margin-left:231px;">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="/tasks/indexv">View Tasks</a></li>
+      <li role="presentation"><a href="/new_task">Add a New Task</a></li>
+      <li role="presentation"><a href="/tasks/indexe">Edit Tasks</a></li>
+      <li role="presentation"><a href="/tasks/indexd">Delete Tasks</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="container">
+      <div>
+        <strong>Name</strong>:<br />
+        <p><%= @task.name %></p>
+      </div>
+      <div>
+        <strong>Description</strong>:<br />
+        <p><%= @task.description %></p>
+      </div>
+      <div>
+        <strong>Date</strong>:<br />
+        <p><%= @task.date %></p>
+      </div>
+      <div>
+        <strong>Location</strong>:<br />
+        <p><%= @task.location %></p>
+      </div>
+      <div>
+        <strong>User</strong>:<br />
+        <p><%= User.find_by_id(@task.user_id).name %></p>
+      </div>
+      <a href="/tasks/indexv">Back</a>
+    </div>
+  </div>
+</div>

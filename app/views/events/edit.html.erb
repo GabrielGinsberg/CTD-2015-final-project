@@ -1,0 +1,43 @@
+<div class="container">
+  <h1><b><u>Edit Event #<%= @event.id %></u></b></h1>
+</div>
+
+<div class="container" style="margin-left:231px;">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="/events/indexv">View Events</a></li>
+      <li role="presentation"><a href="/new_event">Add a New Event</a></li>
+      <li role="presentation" class="active"><a href="/events/indexe">Edit Events</a></li>
+      <li role="presentation"><a href="/events/indexd">Delete Events</a></li>
+    </ul>
+  </div>
+</div>
+
+<form class="container" action="/events/<%= @event.id %>/update">
+  <div class="jumbotron">
+    <div>
+      <label for="name">name</label><br />
+      <input id="name" name="name" value="<%= @event.name  %>" type="text" />
+    </div>
+    <div>
+      <label for="description">description</label><br />
+      <input id="description" name="description" value="<%= @event.description  %>" type="text" />
+    </div>
+    <div>
+      <label for="date">date</label><br />
+      <input id="date" name="date" value="<%= @event.date  %>" type="text" />
+    </div>
+    <div>
+      <label for="location">location</label><br />
+      <input id="location" name="location" value="<%= @event.location  %>" type="text" />
+    </div>
+    <div>
+      <label for="user_id">user_id</label><br />
+      <input id="user_id" name="user_id" value="<%= @event.user_id  %>" type="text" />
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+    <a href="/events/indexe">Back</a>
+  </div>
+</form>

@@ -1,0 +1,43 @@
+<div class="container">
+  <h1><b><u>New Task</u></b></h1>
+</div>
+
+<div class="container" style="margin-left:231px;">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="/tasks/indexv">View Tasks</a></li>
+      <li role="presentation" class="active"><a href="/new_task">Add a New Task</a></li>
+      <li role="presentation"><a href="/tasks/indexe">Edit Tasks</a></li>
+      <li role="presentation"><a href="/tasks/indexd">Delete Tasks</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="jumbotron">
+    <form class="container" action="/create_task">
+      <div>
+        <label for="name">name</label><br />
+        <input id="name" name="name" type="text" placeholder="Name of the task"/>
+      </div>
+      <div>
+        <label for="description">description</label><br />
+        <input id="description" name="description" type="text" placeholder="Description of the task"/>
+      </div>
+      <div>
+        <label for="date">date</label><br />
+        <input id="date" name="date" type="text" placeholder="YYYY-MM-DD"/>
+      </div>
+      <div>
+        <label for="location">location</label><br />
+        <input id="location" name="location" type="text" placeholder="Location of the task"/>
+      </div>
+      <div>
+        <label for="user_id">user_id</label><br />
+        <input id="user_id" name="user_id" type="text" placeholder="user_id of whom it belongs to"/>
+      </div>
+      <div>
+        <input type="submit">
+      </div>
+    </form>
+  </div>
+</div>

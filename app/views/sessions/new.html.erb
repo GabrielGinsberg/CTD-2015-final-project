@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Welcome</h1>
+      </div>
+      <div class="col-md-3">
+        <div class="container">
+          <h3><b><u>Sign in</u></b></h3>
+        </div>
+        <form action="/sessions/create">
+          <label for="username">Username:</label>
+          <input id="username" type="text" placeholder="your  username here" name="username">
+          <label for="password">Password:</label>
+          <input id="password" type="password" placeholder="your  password here" name="password">
+          <input type="submit">
+        </form>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="container">
+          <h3><b><u>Sign up</u></b></h3>
+        </div>
+       <form action="/create_user">
+          <div>
+            <label for="name">name</label><br />
+            <input id="name" name="name" type="text" />
+          </div>
+          <div>
+            <label for="email">email</label><br />
+            <input id="email" name="email" type="text" />
+          </div>
+            <div>
+            <label for="password">password</label><br />
+            <input id="password" name="password" type="password" />
+          </div>
+          <div>
+            <label for="password_confirmation">confirm password</label><br />
+            <input id="password_confirmation" name="password_confirmation" type="password" />
+          </div>
+          <div>
+            <input type="submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <h1><b><u>Your Account</u></b></h1>
+</div>
+
+<div class="container" style="margin-left:231px;">
+  <div class="row" >
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="/users/<%=params['id']%>"> View Account</a></li>
+      <li role="presentation"><a href="/users/<%=params['id']%>/edit">Edit Account</a></li>
+      <li role="presentation"><a href="/users/<%=params['id']%>/destroy">Delete Account</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="container">
+      <div>
+        <strong>Name</strong>:<br />
+        <p><%=@user.name%></p>
+      </div>
+      <div>
+        <strong>Email</strong>:<br />
+        <p><%= @user.email %></p>
+      </div>
+      <div>
+        <strong>User ID</strong>:<br />
+        <p><%= @user.id %></p>
+      </div>
+    </div>
+  </div>
+</div>

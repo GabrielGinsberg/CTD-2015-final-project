@@ -1,0 +1,44 @@
+<div class="container">
+  <h1><b><u>Edit Task: <%= @task.name %></u></b></h1>
+</div>
+
+<div class="container" style="margin-left:231px;">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a href="/tasks/indexv">View Tasks</a></li>
+      <li role="presentation"><a href="/new_task">Add a New Task</a></li>
+      <li role="presentation" class="active"><a href="/tasks/indexe">Edit Tasks</a></li>
+      <li role="presentation"><a href="/tasks/indexd">Delete Tasks</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="jumbotron">
+    <form class="container" action="/tasks/<%= @task.id %>/update">
+      <div>
+        <label for="name">name</label><br />
+        <input id="name" name="name" value="<%= @task.name  %>" type="text" />
+      </div>
+      <div>
+        <label for="description">description</label><br />
+        <input id="description" name="description" value="<%= @task.description  %>" type="text" />
+      </div>
+      <div>
+        <label for="date">date</label><br />
+        <input id="date" name="date" value="<%= @task.date  %>" type="text" />
+      </div>
+      <div>
+        <label for="location">location</label><br />
+        <input id="location" name="location" value="<%= @task.location  %>" type="text" />
+      </div>
+      <div>
+        <label for="user_id">user</label><br />
+        <input id="user_id" name="user_id" value="<%= @task.user_id  %>" type="text" />
+      </div>
+      <div>
+        <input type="submit">
+      </div>
+      <a href="/tasks/indexe">Back</a>
+    </form>
+  </div>
+</div>
